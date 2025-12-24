@@ -6,15 +6,15 @@ README_PATH = "README.md"
 
 def generate_content(days_left):
     if days_left > 1:
-        message = f"**{days_left} days until I see skyy** 💫"
+        message = f"**{days_left} days until I can see her** "
     elif days_left == 1:
-        message = f"**1 day until I see skyy** 💫"
+        message = f"**1 day until I see her for the last time (maybe)** "
     elif days_left == 0:
-        message = "**Today I see skyy!** 🎉"
+        message = "**i tried my best ig :)** "
     else:
         # After the date has passed, count upwards
         days_after = abs(days_left)
-        message = f"**+{days_after} days maybe I get to see her** 💭"
+        message = f"**+{days_after} days maybe I get to see her or not**"
     
     content = f"{message}\n"
     return content
