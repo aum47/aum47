@@ -6,27 +6,17 @@ README_PATH = "README.md"
 
 def generate_content(days_left):
     if days_left > 1:
-        countdown_text = f"{days_left} days"
+        message = f"**{days_left} days until I see skyy** 💫"
     elif days_left == 1:
-        countdown_text = "1 day"
+        message = f"**1 day until I see skyy** 💫"
     elif days_left == 0:
-        countdown_text = "Today is the day"
+        message = "**Today I see skyy!** 🎉"
     else:
-        countdown_text = "The day has passed"
+        # After the date has passed, count upwards
+        days_after = abs(days_left)
+        message = f"**+{days_after} days maybe I get to see her** 💭"
     
-    if days_left > 0:
-        message = f"**{countdown_text} until I see skyy** 💫"
-    else:
-        message = "**Finally seeing skyy!** 🎉"
-    
-    content = f"""# Countdown to February 18, 2026
-
-{message}
-
----
-
-*Last updated: {datetime.now().strftime('%B %d, %Y at %I:%M %p IST')}*
-"""
+    content = f"{message}\n"
     return content
 
 def main():
