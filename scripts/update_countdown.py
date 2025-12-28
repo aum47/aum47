@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime, date
+import pytz
 
 TARGET_DATE = date(2026, 2, 18)
 README_PATH = "README.md"
@@ -20,14 +21,17 @@ def generate_content(days_left):
     return content
 
 def main():
-    today = date.today()
+    # Use IST timezone to get the correct date
+    ist = pytz.timezone('Asia/Kolkata')
+    today = datetime.now(ist).date()
+    
     days_left = (TARGET_DATE - today).days
     content = generate_content(days_left)
     
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(content)
     
-    print(f"Updated countdown: {days_left} days remaining")
+    print(f"Updated countdown: {days_left} days remaining (IST date: {today})")
 
 if __name__ == "__main__":
     main()
