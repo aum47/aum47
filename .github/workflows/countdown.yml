@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: '3.x'
       
+      - name: Install dependencies
+        run: |
+          pip install pytz
+      
       - name: Run countdown update script
         run: |
           python3 scripts/update_countdown.py
