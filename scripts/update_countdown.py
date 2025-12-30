@@ -7,7 +7,7 @@ README_PATH = "README.md"
 
 def generate_content(days_left):
     if days_left > 1:
-        message = f"**{days_left} days until I can see her** "
+        message = f"**{days_left} days until I can hopefully see her** "
     elif days_left == 1:
         message = f"**1 day until I see her for the last time (maybe)** "
     elif days_left == 0:
