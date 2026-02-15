@@ -1,10 +1,11 @@
 name: Daily Countdown Update
 
 on:
-  schedule:
+ workflow_dispatch: # Manual trigger only (auto-updates disabled)
+#  schedule:
     # Runs every day at 3:30 AM IST (10:00 PM UTC previous day)
-    - cron: '0 22 * * *'
-  workflow_dispatch: # Allows manual trigger
+#    - cron: '0 22 * * *'
+#  workflow_dispatch: # Allows manual trigger
 
 permissions:
   contents: write
