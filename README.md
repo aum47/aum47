@@ -1,4 +1,4 @@
-found something brb,
+im aum (if you didnt figure out that already)
 
 youll find stuff mostly for android
 
